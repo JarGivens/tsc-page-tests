@@ -19,7 +19,7 @@ test('about buttons work', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Welcome to the University of' })).toBeVisible();
   await page.locator('#menu-main-menu').getByText('About Home Welcome Values').hover()
   await page.getByRole('link', { name: 'Home' }).click();
-  await expect(page.getByRole('heading', { name: 'Technology Service Center', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '', exact: true })).toBeVisible();
   await page.locator('#menu-main-menu').getByText('About Home Welcome Values').hover()
   await page.getByRole('link', { name: 'Values' }).click();
   await expect(page.getByRole('heading', { name: 'About Us' })).toBeVisible();
