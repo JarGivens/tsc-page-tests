@@ -14,7 +14,7 @@ test('partner with us button works', async ({ page }) => {
 });
 
 test('about buttons work', async ({ page }) => {
-  //hello! More words!!!
+  //hello! More words!!! Buwomp.
   await page.getByRole('link', { name: 'About' }).click();
   await expect(page.getByRole('heading', { name: 'Welcome to the University of' })).toBeVisible();
   await page.locator('#menu-main-menu').getByText('About Home Welcome Values').hover()
