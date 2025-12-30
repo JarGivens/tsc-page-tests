@@ -43,3 +43,7 @@ test('contact us button works', async ({ page }) => {
   await page.getByRole('link', { name: 'Contact Us' }).click();
   await expect(page.getByRole('heading', { name: 'Drop us a Message' })).toBeVisible();
 });
+
+test('test failure example', async ({ page }) => {
+  await page.getByRole('link', { name: 'THIS DOES NOT EXIST' }).click();
+});
