@@ -25,8 +25,8 @@ fs.readFile('ctrf/ctrf-report.json', 'utf-8', function (err, data) {
                     },
                     body: JSON.stringify({
                         // the username to be displayed
-                        username: 'glorp',
-                        content: "❌TSC Health Check Failed (" + browser[0] + "): \n Test: \"" + failed_tests[i].name + "\" \n" + errorMessage[0] + "\n",
+                        username: 'Playwright Test Reporter',
+                        content: "❌TSC Health Check Failed (" + browser[0] + "): \n Test: \"" + failed_tests[i].name + "\" \n" + errorMessage[0],
                     }),
                 }
             );
