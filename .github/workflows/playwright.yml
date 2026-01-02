@@ -27,3 +27,8 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+    - name: Notify Discord on failure
+      if: ${{ !cancelled() }}
+      env: 
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      run: node notify_discord.js
